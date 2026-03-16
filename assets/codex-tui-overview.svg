@@ -1,42 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
-  <rect width="1400" height="900" fill="#0b1020"/>
-  <rect x="28" y="28" width="1344" height="844" rx="22" fill="#11182d" stroke="#2a3558"/>
-  <rect x="64" y="64" width="1272" height="130" rx="16" fill="#131d34" stroke="#32436d"/>
-  <text x="92" y="112" fill="#7dd3fc" font-family="Menlo, Monaco, monospace" font-size="34">codex-as</text>
-  <text x="92" y="152" fill="#8fa2c9" font-family="Menlo, Monaco, monospace" font-size="22">full-screen account picker and usage dashboard</text>
-  <text x="92" y="186" fill="#f472b6" font-family="Menlo, Monaco, monospace" font-size="22">Press n to pick the recommended best account automatically</text>
-  <text x="1148" y="112" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="24">5h: 15% left</text>
-  <text x="92" y="226" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="24">Accounts refreshed</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#0d1117"/>
+  <!-- terminal window -->
+  <rect x="14" y="14" width="872" height="492" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <!-- title bar -->
+  <rect x="15" y="15" width="870" height="30" rx="7" fill="#21262d"/>
+  <rect x="15" y="34" width="870" height="11" fill="#21262d"/>
+  <circle cx="36" cy="30" r="5.5" fill="#ff5f57"/>
+  <circle cx="53" cy="30" r="5.5" fill="#ffbd2e"/>
+  <circle cx="70" cy="30" r="5.5" fill="#28c840"/>
+  <text x="450" y="35" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="11.5" fill="#8b949e" text-anchor="middle">codex-as</text>
 
-  <rect x="64" y="260" width="470" height="510" rx="16" fill="#0f172a" stroke="#334155"/>
+  <!-- box top border -->
+  <text x="28" y="62" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">╭──────────────────────────────────────────────────────────────────────────────────────────────╮</text>
 
-  <text x="92" y="314" fill="#22d3ee" font-family="Menlo, Monaco, monospace" font-size="24">&gt; * alpha@gmail.com  [recommended]</text>
-  <text x="92" y="344" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">    alpha@gmail.com</text>
-  <text x="92" y="372" fill="#facc15" font-family="Menlo, Monaco, monospace" font-size="18">    5h ██░░░░░░░░░░  15% available  reset Mar 16, 09:00 PM</text>
-  <text x="92" y="400" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="18">    7d ███░░░░░░░░░  25% available  reset Mar 22, 12:00 PM</text>
+  <!-- header: codex-as | 5h: 100% left -->
+  <text x="28" y="81" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="81" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#22d3ee">codex-as</text>
+  <text x="803" y="81" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4ade80">5h: 100% left</text>
+  <text x="856" y="81" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
 
-  <text x="92" y="456" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="22">  - beta@company.com</text>
-  <text x="92" y="484" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">    beta@company.com</text>
-  <text x="92" y="512" fill="#ef4444" font-family="Menlo, Monaco, monospace" font-size="18">    5h ████████████ 100% full       reset Mar 16, 11:00 PM</text>
-  <text x="92" y="540" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="18">    7d ██░░░░░░░░░░  14% available  reset Mar 22, 09:00 AM</text>
+  <!-- project name + github -->
+  <text x="28" y="100" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="100" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">ai-account-switch  ·  github.com/adamtash/ai-account-switch</text>
+  <text x="856" y="100" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
 
-  <text x="92" y="596" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="22">  - work-api-key</text>
-  <text x="92" y="624" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">    apiKey</text>
-  <text x="92" y="652" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="18">    5h ░░░░░░░░░░░░   0% fresh      reset Mar 16, 06:00 PM</text>
-  <text x="92" y="680" fill="#f59e0b" font-family="Menlo, Monaco, monospace" font-size="18">    7d ███████░░░░░  56% busy       reset Mar 23, 03:00 PM</text>
+  <!-- subtitle -->
+  <text x="28" y="119" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="119" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">switch codex accounts mid-session</text>
+  <text x="856" y="119" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
 
-  <rect x="562" y="260" width="774" height="510" rx="16" fill="#0f172a" stroke="#334155"/>
-  <text x="590" y="310" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="28">* alpha@gmail.com</text>
-  <text x="590" y="344" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="20">  alpha@gmail.com  /  team</text>
-  <text x="590" y="392" fill="#facc15" font-family="Menlo, Monaco, monospace" font-size="22">  5h ██░░░░░░░░░░  15% available</text>
-  <text x="590" y="424" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">     reset Mar 16, 09:00 PM</text>
-  <text x="590" y="468" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="22">  7d ███░░░░░░░░░  25% available</text>
-  <text x="590" y="500" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">     reset Mar 22, 12:00 PM</text>
-  <text x="590" y="544" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="22">  Status  live usage loaded</text>
-  <text x="590" y="632" fill="#f472b6" font-family="Menlo, Monaco, monospace" font-size="20">  [recommended]</text>
-  <text x="590" y="664" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="18">  picked because its 5h window resets sooner than</text>
-  <text x="590" y="690" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="18">  the other available accounts</text>
+  <!-- hints (no x restore for codex) -->
+  <text x="28" y="138" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="138" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">↑/↓ move  enter use  n best  r refresh  a add  d remove  q quit</text>
+  <text x="856" y="138" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
 
-  <rect x="64" y="798" width="1272" height="48" rx="12" fill="#111827" stroke="#334155"/>
-  <text x="92" y="829" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">↑/↓ move  enter use  n best  r refresh  a add  d remove  q quit</text>
+  <!-- status -->
+  <text x="28" y="157" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="157" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4ade80">Accounts refreshed</text>
+  <text x="856" y="157" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- blank -->
+  <text x="28" y="176" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="856" y="176" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- account1 beta@openai.com: selected + active (cursor on it) -->
+  <!-- codex usageBar is REMAINING capacity: 0% util = ████████████ fresh, 100% util = ░░░░░░░░░░░░ full -->
+  <text x="28" y="195" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="195" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#22d3ee" font-weight="bold">&gt; * beta@openai.com</text>
+  <text x="856" y="195" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <text x="28" y="214" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="214" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">    beta@openai.com</text>
+  <text x="856" y="214" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- beta 5h: 0% util → ████████████ fresh (remaining=100%) green -->
+  <text x="28" y="233" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="233" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4ade80">    5h ████████████  0%  fresh       </text>
+  <text x="403" y="233" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">reset Mar 16, 08:00 PM</text>
+  <text x="856" y="233" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- beta 7d: 56% util → █████▎░░░░░░ available green -->
+  <text x="28" y="252" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="252" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4ade80">    7d █████▎░░░░░░ 56%  available   </text>
+  <text x="403" y="252" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">reset Mar 23, 09:00 AM</text>
+  <text x="856" y="252" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- blank -->
+  <text x="28" y="271" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="856" y="271" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- account2 alpha@openai.com: not selected, recommended -->
+  <text x="28" y="290" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="290" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#e2e8f0">  - alpha@openai.com</text>
+  <text x="236" y="290" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#e879f9" font-weight="bold">  [recommended]</text>
+  <text x="856" y="290" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <text x="28" y="309" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="309" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">    alpha@openai.com</text>
+  <text x="856" y="309" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- alpha 5h: 15% util → ██████████▎░ available green -->
+  <text x="28" y="328" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="328" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4ade80">    5h ██████████▎░ 15%  available   </text>
+  <text x="403" y="328" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">reset Mar 16, 06:00 PM</text>
+  <text x="856" y="328" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- alpha 7d: 25% util → █████████░░░ available green -->
+  <text x="28" y="347" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="347" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4ade80">    7d █████████░░░ 25%  available   </text>
+  <text x="403" y="347" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">reset Mar 22, 12:00 PM</text>
+  <text x="856" y="347" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- blank -->
+  <text x="28" y="366" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="856" y="366" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- account3 work-api: not selected, 5h full -->
+  <text x="28" y="385" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="385" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#e2e8f0">  - work-api</text>
+  <text x="856" y="385" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <text x="28" y="404" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="404" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">    api-key</text>
+  <text x="856" y="404" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- work-api 5h: 100% util → ░░░░░░░░░░░░ full red -->
+  <text x="28" y="423" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="423" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#ef4444">    5h ░░░░░░░░░░░░ 100%  full        </text>
+  <text x="403" y="423" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">reset Mar 16, 04:00 PM</text>
+  <text x="856" y="423" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- work-api 7d: 14% util → ██████████▍░ available green -->
+  <text x="28" y="442" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+  <text x="44" y="442" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4ade80">    7d ██████████▍░ 14%  available   </text>
+  <text x="403" y="442" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#4b5563">reset Mar 23, 09:00 AM</text>
+  <text x="856" y="442" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">│</text>
+
+  <!-- box bottom border -->
+  <text x="28" y="461" font-family="'JetBrains Mono',Menlo,Monaco,monospace" font-size="13.5" fill="#30363d">╰──────────────────────────────────────────────────────────────────────────────────────────────╯</text>
 </svg>

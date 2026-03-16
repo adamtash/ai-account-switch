@@ -162,6 +162,8 @@ function AccountsUi({ args, onLogin }) {
         <${Text} color="cyan">codex-as<//>
         <${Text} color=${busy ? "yellow" : remainingTint(remaining)}>${capacityText}<//>
       <//>
+      <${Text} dimColor>ai-account-switch  ·  github.com/adamtash/ai-account-switch<//>
+      <${Text} dimColor>switch codex accounts mid-session<//>
       <${Text} dimColor>↑/↓ move  enter use  n best  r refresh  a add  d remove  q quit<//>
       ${statusMessage ? html`<${Text} color="green">${truncate(statusMessage, 80)}<//>` : null}
       ${errorMessage ? html`<${Text} color="red">${truncate(errorMessage, 80)}<//>` : null}
@@ -173,15 +175,18 @@ function AccountsUi({ args, onLogin }) {
             const rec = recommendation?.row.name === row.name;
             return html`
               <${Box} key=${row.name} flexDirection="column" marginTop=${1}>
-                <${Text} color=${sel ? "cyan" : row.active ? "green" : "white"} bold=${sel}>
-                  ${`${sel ? ">" : " "} ${row.active ? "*" : "-"} ${row.name}${rec ? "  [recommended]" : ""}`}
+                <${Box} flexDirection="row">
+                  <${Text} color=${sel ? "cyan" : row.active ? "green" : "white"} bold=${sel}>
+                    ${`${sel ? ">" : " "} ${row.active ? "*" : "-"} ${row.name}`}
+                  <//>
+                  ${rec ? html`<${Text} color="magenta" bold>  [recommended]<//>` : null}
                 <//>
                 <${Text} dimColor>${`    ${truncate(row.email || row.type || "-", 60)}`}<//>
                 <${Text} color=${tintForUsage(row.fiveHour)}>
-                  ${`    5h ${usageBar(row.fiveHour)}  ${usageLabel(row.fiveHour)}  reset ${formatDate(row.fiveHour?.resetsAt)}`}
+                  ${`    5h ${usageBar(row.fiveHour)}  ${usageLabel(row.fiveHour).padEnd(11)}  reset ${formatDate(row.fiveHour?.resetsAt)}`}
                 <//>
                 <${Text} color=${tintForUsage(row.weekly)}>
-                  ${`    7d ${usageBar(row.weekly)}  ${usageLabel(row.weekly)}  reset ${formatDate(row.weekly?.resetsAt)}`}
+                  ${`    7d ${usageBar(row.weekly)}  ${usageLabel(row.weekly).padEnd(11)}  reset ${formatDate(row.weekly?.resetsAt)}`}
                 <//>
                 ${row.error ? html`<${Text} color="red">${`    error: ${truncate(row.error, 60)}`}<//>` : null}
               <//>
