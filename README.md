@@ -14,20 +14,20 @@ Switch Claude Code and Codex accounts mid-session — no restarts, no interrupti
 Requirements: Node.js 20+, and the respective CLI installed (`claude` / `codex`).
 
 ```bash
-npm install -g ai-as
+npm install -g @adamtash/ai-as
 ```
 
 Or run without installing:
 
 ```bash
-npx ai-as@latest claude-as
-npx ai-as@latest codex-as
+npx @adamtash/ai-as@latest claude-as
+npx @adamtash/ai-as@latest codex-as
 ```
 
 From a local clone:
 
 ```bash
-git clone https://github.com/<your-username>/ai-account-switch
+git clone https://github.com/adamtash/ai-account-switch
 cd ai-account-switch
 npm install
 npm link
@@ -189,4 +189,4 @@ codex-as status --codex-home ~/tmp/codex-home
 npm publish
 ```
 
-Both `claude-as` and `codex-as` will be available after `npm install -g ai-as`.
+Both `claude-as` and `codex-as` will be available after `npm install -g @adamtash/ai-as`.
