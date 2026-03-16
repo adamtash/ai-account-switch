@@ -21,8 +21,8 @@
   },
   "preferGlobal": true,
   "bin": {
-    "claude-as": "./bin/claude-as.js",
-    "codex-as": "./bin/codex-as.js"
+    "claude-as": "bin/claude-as.js",
+    "codex-as": "bin/codex-as.js"
   },
   "files": [
     "assets",
