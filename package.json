@@ -1,6 +1,6 @@
 {
   "name": "@adamtash/ai-as",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Switch Claude Code and Codex accounts mid-session — no restarts, no interruptions.",
   "license": "MIT",
   "keywords": [
