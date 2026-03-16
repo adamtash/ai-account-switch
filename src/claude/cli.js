@@ -7,6 +7,7 @@ import {
   resolveClaudeBinary,
   restoreBinary
 } from "./patch.js";
+import { patchGsd, resolveGsdBinary, restoreGsd } from "../gsd/patch.js";
 import readline from "node:readline/promises";
 import process from "node:process";
 import fs from "node:fs";
@@ -202,12 +203,14 @@ function printHelp() {
       "Main commands:",
       "  ui                 Open the full-screen accounts UI",
       "  patch              Patch the Claude binary once",
+      "  patch-gsd          Patch the GSD runtime so account switches take effect mid-session",
       "  add                Add the current Claude account using its email",
       "  list               Show saved accounts and usage",
       "  pick               Patch Claude, then switch to the best account for the current 5h window",
       "  use --name <x>     Patch Claude, then switch to a saved account",
       "  status             Show the active Claude credential target",
-      "  restore            Undo the patch from backup",
+      "  restore            Undo the Claude patch from backup",
+      "  restore-gsd        Undo the GSD patch from backup",
       "",
       "Examples:",
       "  claude-as",
@@ -390,6 +393,31 @@ function formatCredentialWrite(writeResult) {
   }
 
   return writeResult.backend || "-";
+}
+
+function printGsdPatchResult(title, fn, action) {
+  if (!process.stdout.isTTY) {
+    try { printJsonFallback({ action, ...fn() }); } catch (e) { console.error(e.message); }
+    return;
+  }
+  try {
+    const result = fn();
+    const status = action === "restore" ? good("restored") : result.changed ? good("patched") : warn("already patched");
+    const lines = [
+      labelValue("Status", status),
+      labelValue("File", result.filePath),
+      labelValue("Backup", result.backupPath)
+    ];
+    if (action === "patch") {
+      lines.push(labelValue("Changed", result.changed ? "yes" : "no"));
+      if (result.changed) {
+        lines.push(labelValue("Effect", good("running GSD sessions will pick up new accounts immediately")));
+      }
+    }
+    printPanel(title, lines);
+  } catch (error) {
+    printPanel(title, [labelValue("Error", bad(error.message))]);
+  }
 }
 
 function printCheckResult(result) {
@@ -1115,6 +1143,16 @@ export async function main(argv) {
 
   if (args.command === "restore") {
     printPatchLikeResult("CLAUDE AS RESTORE", restoreClaude(args), "restore");
+    return;
+  }
+
+  if (args.command === "patch-gsd") {
+    printGsdPatchResult("CLAUDE AS PATCH GSD", () => patchGsd(resolveGsdBinary()), "patch");
+    return;
+  }
+
+  if (args.command === "restore-gsd") {
+    printGsdPatchResult("CLAUDE AS RESTORE GSD", () => restoreGsd(resolveGsdBinary()), "restore");
     return;
   }
 

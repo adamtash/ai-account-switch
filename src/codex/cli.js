@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { patchGsd, resolveGsdBinary, restoreGsd } from "../gsd/patch.js";
 import process from "node:process";
 import { spawnSync } from "node:child_process";
 import readline from "node:readline/promises";
@@ -134,6 +135,7 @@ function printHelp() {
       "",
       "Main commands:",
       "  ui                 Open the full-screen accounts UI",
+      "  patch-gsd          Patch the GSD runtime so account switches take effect mid-session",
       "  add                Log into a new Codex account and save it",
       "  list               Show saved accounts and live 5h / 7d usage",
       "  pick               Switch to the best available account for the current 5h window",
@@ -331,6 +333,28 @@ function renderUsage(label, limit) {
 
 function printJsonFallback(value) {
   console.log(JSON.stringify(value, null, 2));
+}
+
+function printGsdPatchResult(title, fn, action) {
+  if (!process.stdout.isTTY) {
+    try { printJsonFallback({ action, ...fn() }); } catch (e) { console.error(e.message); }
+    return;
+  }
+  try {
+    const result = fn();
+    const status = action === "restore" ? good("restored") : result.changed ? good("patched") : warn("already patched");
+    const lines = [
+      labelValue("Status", status),
+      labelValue("File", result.filePath),
+      labelValue("Backup", result.backupPath)
+    ];
+    if (action === "patch" && result.changed) {
+      lines.push(labelValue("Effect", good("running GSD sessions will pick up new accounts immediately")));
+    }
+    printPanel(title, lines);
+  } catch (error) {
+    printPanel(title, [labelValue("Error", bad(error.message))]);
+  }
 }
 
 function printPanel(title, lines = []) {
@@ -860,6 +884,16 @@ export async function main(argv) {
   if (command === "ui") {
     const { runAccountsUi } = await import("./ui.js");
     await runAccountsUi(parsed);
+    return;
+  }
+
+  if (command === "patch-gsd") {
+    printGsdPatchResult("CODEX AS PATCH GSD", () => patchGsd(resolveGsdBinary()), "patch");
+    return;
+  }
+
+  if (command === "restore-gsd") {
+    printGsdPatchResult("CODEX AS RESTORE GSD", () => restoreGsd(resolveGsdBinary()), "restore");
     return;
   }
 
