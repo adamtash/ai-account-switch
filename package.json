@@ -1,0 +1,42 @@
+{
+  "name": "@adamtash/ai-as",
+  "version": "0.1.0",
+  "description": "Switch Claude Code and Codex accounts mid-session — no restarts, no interruptions.",
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "codex",
+    "openai",
+    "anthropic",
+    "cli",
+    "tui",
+    "account-switcher"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "claude-as": "./bin/claude-as.js",
+    "codex-as": "./bin/codex-as.js"
+  },
+  "files": [
+    "assets",
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node ./test/claude.mjs && node ./test/codex.mjs"
+  },
+  "dependencies": {
+    "htm": "^3.1.1",
+    "ink": "^6.8.0",
+    "react": "^19.2.4"
+  }
+}

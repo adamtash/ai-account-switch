@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
+  <rect width="1400" height="900" fill="#0b1020"/>
+  <rect x="28" y="28" width="1344" height="844" rx="22" fill="#11182d" stroke="#2a3558"/>
+  <rect x="64" y="64" width="1272" height="130" rx="16" fill="#131d34" stroke="#32436d"/>
+  <text x="92" y="112" fill="#7dd3fc" font-family="Menlo, Monaco, monospace" font-size="34">claude-as</text>
+  <text x="92" y="152" fill="#8fa2c9" font-family="Menlo, Monaco, monospace" font-size="22">full-screen account picker and usage dashboard</text>
+  <text x="92" y="186" fill="#f472b6" font-family="Menlo, Monaco, monospace" font-size="22">Press n to pick the recommended best account automatically</text>
+  <text x="988" y="112" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="24">claude patched  5h: 75% left</text>
+  <text x="92" y="226" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="24">Accounts refreshed</text>
+
+  <rect x="64" y="260" width="470" height="510" rx="16" fill="#0f172a" stroke="#334155"/>
+
+  <text x="92" y="314" fill="#22d3ee" font-family="Menlo, Monaco, monospace" font-size="24">&gt; * account1@claude.ai  [recommended]</text>
+  <text x="92" y="344" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">    account1@claude.ai</text>
+  <text x="92" y="372" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="18">    5h ████████░░░░ 75%  available  reset Mar 16, 10:00 PM</text>
+  <text x="92" y="400" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="18">    7d ██░░░░░░░░░░ 14%  available  reset Mar 22, 12:00 PM</text>
+
+  <text x="92" y="456" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="22">  - account2@claude.ai</text>
+  <text x="92" y="484" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">    account2@claude.ai</text>
+  <text x="92" y="512" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="18">    5h ░░░░░░░░░░░░  0%  fresh      reset Mar 16, 08:00 PM</text>
+  <text x="92" y="540" fill="#facc15" font-family="Menlo, Monaco, monospace" font-size="18">    7d ████████████ 100% full       reset Mar 22, 09:00 AM</text>
+
+  <text x="92" y="596" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="22">  - account3@claude.ai</text>
+  <text x="92" y="624" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">    account3@claude.ai</text>
+  <text x="92" y="652" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="18">    5h ░░░░░░░░░░░░  0%  fresh      reset Mar 16, 06:00 PM</text>
+  <text x="92" y="680" fill="#f59e0b" font-family="Menlo, Monaco, monospace" font-size="18">    7d ███████░░░░░  56% busy       reset Mar 23, 03:00 PM</text>
+
+  <rect x="562" y="260" width="774" height="510" rx="16" fill="#0f172a" stroke="#334155"/>
+  <text x="590" y="310" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="28">* account1@claude.ai</text>
+  <text x="590" y="344" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="20">  account1@claude.ai</text>
+  <text x="590" y="392" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="22">  5h ████████░░░░ 75%  available</text>
+  <text x="590" y="424" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">     reset Mar 16, 10:00 PM</text>
+  <text x="590" y="468" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="22">  7d ██░░░░░░░░░░ 14%  available</text>
+  <text x="590" y="500" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">     reset Mar 22, 12:00 PM</text>
+  <text x="590" y="544" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="22">  Status  usage loaded</text>
+  <text x="590" y="576" fill="#4ade80" font-family="Menlo, Monaco, monospace" font-size="22">  Claude  patched</text>
+  <text x="590" y="632" fill="#f472b6" font-family="Menlo, Monaco, monospace" font-size="20">  [recommended]</text>
+  <text x="590" y="664" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="18">  picked because its 5h window resets sooner than</text>
+  <text x="590" y="690" fill="#e2e8f0" font-family="Menlo, Monaco, monospace" font-size="18">  the other available accounts</text>
+
+  <rect x="64" y="798" width="1272" height="48" rx="12" fill="#111827" stroke="#334155"/>
+  <text x="92" y="829" fill="#94a3b8" font-family="Menlo, Monaco, monospace" font-size="18">↑/↓ move  enter use  n best  r refresh  x restore  a add  d remove  q quit</text>
+</svg>
